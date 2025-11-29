@@ -192,6 +192,49 @@
             background: #aaa;
         }
 
+        /* 导航按钮 */
+        .content-footer {
+            padding: 20px 30px;
+            background-color: #fff;
+            border-top: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 -2px 4px rgba(0,0,0,0.05);
+        }
+
+        .nav-btn {
+            padding: 12px 24px;
+            border: 2px solid #3498db;
+            background-color: #fff;
+            color: #3498db;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .nav-btn:hover:not(:disabled) {
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            border-color: #bdc3c7;
+            color: #bdc3c7;
+        }
+
+        .nav-btn-prev {
+            margin-right: auto;
+        }
+
+        .nav-btn-next {
+            margin-left: auto;
+        }
+
         /* 响应式设计 */
         @media (max-width: 768px) {
             .container {
@@ -264,6 +307,10 @@
                 <div class="empty-state">
                     请从左侧选择章节开始阅读
                 </div>
+            </div>
+            <div class="content-footer" id="contentFooter" style="display: none;">
+                <button class="nav-btn nav-btn-prev" id="btnPrev" onclick="navigateChapter(-1)" disabled>← 上一章</button>
+                <button class="nav-btn nav-btn-next" id="btnNext" onclick="navigateChapter(1)" disabled>下一章 →</button>
             </div>
         </div>
     </div>
@@ -373,11 +420,15 @@
 
             // 显示内容
             updateContent();
+
+            // 更新导航按钮状态
+            updateNavigationButtons();
         }
 
         // 更新内容显示
         function updateContent() {
             if (currentChapterIndex === null) {
+                document.getElementById('contentFooter').style.display = 'none';
                 return;
             }
 
@@ -385,6 +436,7 @@
             if (!chapter || !chapter.chunks || chapter.chunks.length === 0) {
                 document.getElementById('contentBody').innerHTML = 
                     '<div class="empty-state">该章节暂无内容</div>';
+                document.getElementById('contentFooter').style.display = 'flex';
                 return;
             }
 
@@ -403,6 +455,9 @@
 
             document.getElementById('contentBody').innerHTML = 
                 `<div class="content-text">${formatText(content)}</div>`;
+            
+            // 显示导航按钮
+            document.getElementById('contentFooter').style.display = 'flex';
         }
 
         // 切换视图（原文/摘要）
@@ -428,6 +483,54 @@
             // 将单个换行转换为<br>
             html = html.replace(/\n/g, '<br>');
             return '<p>' + html + '</p>';
+        }
+
+        // 更新导航按钮状态
+        function updateNavigationButtons() {
+            if (!bookData || !bookData.chapters || currentChapterIndex === null) {
+                document.getElementById('btnPrev').disabled = true;
+                document.getElementById('btnNext').disabled = true;
+                return;
+            }
+
+            const chapters = bookData.chapters;
+            const currentIndex = chapters.findIndex(ch => ch.chapter_index === currentChapterIndex);
+            
+            // 上一章按钮
+            const prevBtn = document.getElementById('btnPrev');
+            if (currentIndex > 0) {
+                prevBtn.disabled = false;
+            } else {
+                prevBtn.disabled = true;
+            }
+
+            // 下一章按钮
+            const nextBtn = document.getElementById('btnNext');
+            if (currentIndex < chapters.length - 1) {
+                nextBtn.disabled = false;
+            } else {
+                nextBtn.disabled = true;
+            }
+        }
+
+        // 导航到上一章或下一章
+        function navigateChapter(direction) {
+            if (!bookData || !bookData.chapters || currentChapterIndex === null) {
+                return;
+            }
+
+            const chapters = bookData.chapters;
+            const currentIndex = chapters.findIndex(ch => ch.chapter_index === currentChapterIndex);
+            
+            let targetIndex = currentIndex + direction;
+            
+            if (targetIndex >= 0 && targetIndex < chapters.length) {
+                const targetChapter = chapters[targetIndex];
+                selectChapter(targetChapter.chapter_index);
+                
+                // 滚动到顶部
+                document.getElementById('contentBody').scrollTop = 0;
+            }
         }
 
         // 页面加载时初始化
