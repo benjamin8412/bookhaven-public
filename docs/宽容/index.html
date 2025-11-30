@@ -156,6 +156,11 @@
             color: #fff;
         }
 
+        .toggle-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
         .content-body {
             flex: 1;
             overflow-y: auto;
@@ -335,8 +340,7 @@
                 <div class="header-right">
                     <div class="view-toggle">
                         <button class="toggle-btn active" id="btnOriginal" onclick="switchView('original')">原文</button>
-                        <!-- 暂时隐藏摘要按钮，因为txt文件不包含摘要 -->
-                        <!-- <button class="toggle-btn" id="btnSummary" onclick="switchView('summary')">摘要</button> -->
+                        <button class="toggle-btn" id="btnSummary" onclick="switchView('summary')">摘要</button>
                     </div>
                 </div>
             </div>
@@ -457,6 +461,16 @@
             document.getElementById('contentBody').innerHTML = 
                 '<div class="loading"><div class="spinner"></div><span>加载中...</span></div>';
 
+            // 更新摘要按钮状态
+            const btnSummary = document.getElementById('btnSummary');
+            if (chapter.hasSummary) {
+                btnSummary.disabled = false;
+                btnSummary.title = '';
+            } else {
+                btnSummary.disabled = true;
+                btnSummary.title = '该章节暂无摘要';
+            }
+
             // 加载内容
             await loadChapterContent(chapter);
 
@@ -469,15 +483,33 @@
             try {
                 const currentPath = window.location.pathname;
                 const basePath = currentPath.substring(0, currentPath.lastIndexOf('/') + 1);
-                const filePath = basePath + '章节目录/' + encodeURIComponent(chapter.fileName);
                 
+                // 加载原文
+                const filePath = basePath + '章节目录/' + encodeURIComponent(chapter.fileName);
                 const response = await fetch(filePath);
                 if (!response.ok) {
                     throw new Error(`加载文件失败: ${response.status}`);
                 }
-                
                 const text = await response.text();
                 currentChapterContent = text;
+                
+                // 如果有摘要，尝试加载
+                if (chapter.hasSummary) {
+                    const summaryPath = basePath + '摘要目录/' + encodeURIComponent(chapter.fileName);
+                    try {
+                        const summaryResponse = await fetch(summaryPath);
+                        if (summaryResponse.ok) {
+                            currentChapterSummary = await summaryResponse.text();
+                        } else {
+                            currentChapterSummary = null;
+                        }
+                    } catch (e) {
+                        console.warn('加载摘要失败:', e);
+                        currentChapterSummary = null;
+                    }
+                } else {
+                    currentChapterSummary = null;
+                }
                 
                 // 更新内容显示
                 updateContent();
@@ -489,6 +521,7 @@
         }
 
         let currentChapterContent = '';
+        let currentChapterSummary = null;
 
         // 更新内容显示
         function updateContent() {
@@ -496,15 +529,25 @@
                 return;
             }
 
-            // 分离正文和注释
-            let content = currentChapterContent;
-            const parts = content.split('————————————————————');
-            if (parts.length > 1 && currentView === 'original') {
+            let content = '';
+            
+            if (currentView === 'original') {
                 // 原文模式：显示正文部分
+                const parts = currentChapterContent.split('————————————————————');
                 content = parts[0].trim();
-            } else if (parts.length > 1 && currentView === 'summary') {
-                // 摘要模式：暂时只显示正文（因为txt文件没有摘要）
-                content = parts[0].trim();
+            } else if (currentView === 'summary') {
+                // 摘要模式：显示摘要
+                if (currentChapterSummary) {
+                    content = currentChapterSummary.trim();
+                } else {
+                    // 如果没有摘要，显示提示
+                    const chapter = bookData.chapters.find(ch => ch.index === currentChapterIndex);
+                    if (chapter && !chapter.hasSummary) {
+                        content = '该章节暂无摘要，请先使用摘要生成工具生成摘要。';
+                    } else {
+                        content = '摘要加载中...';
+                    }
+                }
             }
 
             if (!content) {
@@ -522,7 +565,20 @@
 
             // 更新按钮状态
             document.getElementById('btnOriginal').classList.toggle('active', view === 'original');
-            document.getElementById('btnSummary').classList.toggle('active', view === 'summary');
+            const btnSummary = document.getElementById('btnSummary');
+            btnSummary.classList.toggle('active', view === 'summary');
+            
+            // 如果没有摘要，禁用摘要按钮
+            if (currentChapterIndex !== null) {
+                const chapter = bookData.chapters.find(ch => ch.index === currentChapterIndex);
+                if (chapter && !chapter.hasSummary) {
+                    btnSummary.disabled = true;
+                    btnSummary.title = '该章节暂无摘要';
+                } else {
+                    btnSummary.disabled = false;
+                    btnSummary.title = '';
+                }
+            }
 
             // 更新内容（如果已加载）
             if (currentChapterIndex !== null) {

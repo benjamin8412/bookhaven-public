@@ -11,7 +11,7 @@
       "chapter_index": 1,
       "base_title": "第一章　祸起无知",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 2,
@@ -21,7 +21,7 @@
       "chapter_index": 1,
       "base_title": "第一章　祸起无知",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 3,
@@ -31,7 +31,7 @@
       "chapter_index": 2,
       "base_title": "第二章　古希腊人",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 4,
@@ -41,7 +41,7 @@
       "chapter_index": 2,
       "base_title": "第二章　古希腊人",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 5,
@@ -51,7 +51,7 @@
       "chapter_index": 2,
       "base_title": "第二章　古希腊人",
       "split_num": 3,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 6,
@@ -61,7 +61,7 @@
       "chapter_index": 2,
       "base_title": "第二章　古希腊人",
       "split_num": 4,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 7,
@@ -71,7 +71,7 @@
       "chapter_index": 2,
       "base_title": "第二章　古希腊人",
       "split_num": 5,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 8,
@@ -81,7 +81,7 @@
       "chapter_index": 3,
       "base_title": "第三章　禁锢的开始",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 9,
@@ -91,7 +91,7 @@
       "chapter_index": 3,
       "base_title": "第三章　禁锢的开始",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 10,
@@ -101,7 +101,7 @@
       "chapter_index": 4,
       "base_title": "第四章　基督的曙光",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 11,
@@ -111,7 +111,7 @@
       "chapter_index": 4,
       "base_title": "第四章　基督的曙光",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 12,
@@ -121,7 +121,7 @@
       "chapter_index": 4,
       "base_title": "第四章　基督的曙光",
       "split_num": 3,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 13,
@@ -131,7 +131,7 @@
       "chapter_index": 5,
       "base_title": "第五章　牢笼",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 14,
@@ -141,7 +141,7 @@
       "chapter_index": 5,
       "base_title": "第五章　牢笼",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 15,
@@ -151,7 +151,7 @@
       "chapter_index": 6,
       "base_title": "第六章　纯洁的生活",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 16,
@@ -161,7 +161,7 @@
       "chapter_index": 6,
       "base_title": "第六章　纯洁的生活",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 17,
@@ -171,7 +171,7 @@
       "chapter_index": 7,
       "base_title": "第七章　宗教审判庭",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 18,
@@ -181,7 +181,7 @@
       "chapter_index": 7,
       "base_title": "第七章　宗教审判庭",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 19,
@@ -191,7 +191,7 @@
       "chapter_index": 8,
       "base_title": "第八章　漫漫求知路",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 20,
@@ -201,7 +201,7 @@
       "chapter_index": 8,
       "base_title": "第八章　漫漫求知路",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 21,
@@ -211,7 +211,7 @@
       "chapter_index": 9,
       "base_title": "第九章　向书本宣战",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 22,
@@ -221,7 +221,7 @@
       "chapter_index": 10,
       "base_title": "第十章　这是一本怎样的历史书籍",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 23,
@@ -231,7 +231,7 @@
       "chapter_index": 11,
       "base_title": "第十一章　文艺复兴",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 24,
@@ -241,7 +241,7 @@
       "chapter_index": 12,
       "base_title": "第十二章　宗教改革",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 25,
@@ -251,7 +251,7 @@
       "chapter_index": 12,
       "base_title": "第十二章　宗教改革",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 26,
@@ -261,7 +261,7 @@
       "chapter_index": 13,
       "base_title": "第十三章　伊拉斯谟",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 27,
@@ -271,7 +271,7 @@
       "chapter_index": 13,
       "base_title": "第十三章　伊拉斯谟",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 28,
@@ -281,7 +281,7 @@
       "chapter_index": 14,
       "base_title": "第十四章　拉伯雷",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 29,
@@ -291,7 +291,7 @@
       "chapter_index": 14,
       "base_title": "第十四章　拉伯雷",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 30,
@@ -301,7 +301,7 @@
       "chapter_index": 15,
       "base_title": "第十五章　旧事物的新招牌",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 31,
@@ -311,7 +311,7 @@
       "chapter_index": 15,
       "base_title": "第十五章　旧事物的新招牌",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 32,
@@ -321,7 +321,7 @@
       "chapter_index": 16,
       "base_title": "第十六章　再洗礼教徒",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 33,
@@ -331,7 +331,7 @@
       "chapter_index": 17,
       "base_title": "第十七章　索兹尼叔侄",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 34,
@@ -341,7 +341,7 @@
       "chapter_index": 17,
       "base_title": "第十七章　索兹尼叔侄",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 35,
@@ -351,7 +351,7 @@
       "chapter_index": 18,
       "base_title": "第十八章　蒙田",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 36,
@@ -361,7 +361,7 @@
       "chapter_index": 19,
       "base_title": "第十九章　阿米尼斯",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 37,
@@ -371,7 +371,7 @@
       "chapter_index": 19,
       "base_title": "第十九章　阿米尼斯",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 38,
@@ -381,7 +381,7 @@
       "chapter_index": 20,
       "base_title": "第二十章　布鲁诺",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 39,
@@ -391,7 +391,7 @@
       "chapter_index": 21,
       "base_title": "第二十一章　斯宾诺莎",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 40,
@@ -401,7 +401,7 @@
       "chapter_index": 21,
       "base_title": "第二十一章　斯宾诺莎",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 41,
@@ -411,7 +411,7 @@
       "chapter_index": 22,
       "base_title": "第二十二章　新天国",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 42,
@@ -421,7 +421,7 @@
       "chapter_index": 22,
       "base_title": "第二十二章　新天国",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 43,
@@ -431,7 +431,7 @@
       "chapter_index": 23,
       "base_title": "第二十三章　太阳王",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 44,
@@ -441,7 +441,7 @@
       "chapter_index": 24,
       "base_title": "第二十四章　腓特烈大帝",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 45,
@@ -451,7 +451,7 @@
       "chapter_index": 25,
       "base_title": "第二十五章　伏尔泰",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 46,
@@ -461,7 +461,7 @@
       "chapter_index": 25,
       "base_title": "第二十五章　伏尔泰",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 47,
@@ -471,7 +471,7 @@
       "chapter_index": 25,
       "base_title": "第二十五章　伏尔泰",
       "split_num": 3,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 48,
@@ -481,7 +481,7 @@
       "chapter_index": 26,
       "base_title": "第二十六章　百科全书",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 49,
@@ -491,7 +491,7 @@
       "chapter_index": 27,
       "base_title": "第二十七章　革命的不宽容",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 50,
@@ -501,7 +501,7 @@
       "chapter_index": 28,
       "base_title": "第二十八章　莱辛",
       "split_num": 1,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 51,
@@ -511,7 +511,7 @@
       "chapter_index": 28,
       "base_title": "第二十八章　莱辛",
       "split_num": 2,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 52,
@@ -521,7 +521,7 @@
       "chapter_index": 29,
       "base_title": "第二十九章　汤姆·佩恩",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     },
     {
       "index": 53,
@@ -531,7 +531,7 @@
       "chapter_index": 30,
       "base_title": "第三十章　最后的百年",
       "split_num": null,
-      "hasSummary": false
+      "hasSummary": true
     }
   ]
 }
